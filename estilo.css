@@ -67,7 +67,7 @@ html{
 }
 .inicio .contenido-banner{
     padding: 20px;
-    background-color: #1e2326;
+    background: linear-gradient(40deg, #1a6dad,#dd2e2e);
     max-width: 350px;
     margin: auto;
     text-align: center;
@@ -75,7 +75,7 @@ html{
 }
 .inicio .contenido-banner img{
     margin-top: 40px;
-    border: 10px solid #1c80b6;
+    border: 10px solid #000000;
     display: block;
     width: 80%;
     margin: auto;
