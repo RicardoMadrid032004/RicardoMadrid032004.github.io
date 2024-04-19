@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
+.container {
+    min-height: 90vh; /* Se ajusta al contenido mínimo del contenedor */
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; /* Centra horizontalmente el contenido */
+    background-image: url(recursos/fondo-elite.PNG);
+}
+
+/* Agrega estilos adicionales según sea necesario */
+
+
+.card{
+    height: 350px;
+    width: 300px;
+    margin: 10px;
+    transition: 300ms;
+}
+
+.personaje, .personaje_2, .personaje_3{
+    height: 350px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+    background-color: #003300;
+    transition: 300ms;
+    position: absolute;
+}
+
+.imagen_personaje{
+    height: 350px;
+    width: 200px;
+    background-image: url(recursos/Persona1.PNG);
+    background-size: cover;
+    margin-bottom: 200px;
+    transition: 300ms;
+    filter: drop-shadow(5px -4px 10px #000);
+}
+
+.imagen_personaje_2{
+    height: 350px;
+    width: 250px;
+    background-image: url(recursos/Persona2.PNG);
+    background-size: cover;
+    margin-bottom: 200px;
+    transition: 300ms;
+    filter: drop-shadow(5px -4px 10px #000);
+}
+
+.imagen_personaje_3{
+    height: 350px;
+    width: 200px;
+    background-image: url(recursos/Persona3.png);
+    background-size: cover;
+    margin-bottom: 200px;
+    transition: 300ms;
+    filter: drop-shadow(5px -4px 10px #000);
+}
+
+.detalle, .detalle_2, .detalle_3{
+    height: 200px;
+    width: 300px;
+    background-color: #40DC30;
+    position: absolute;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    margin-top: 150px;
+    z-index: 2;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    transition: 300ms;
+}
+
+
+/* hover */
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+.card:hover .imagen_personaje{
+    transform: translatey(-40px);
+    transition: 300ms;
+    filter: none;
+    background-image: url(recursos/Persona1.png);
+}
+
+.card:hover .imagen_personaje_2{
+    transform: translatey(-40px);
+    transition: 300ms;
+    filter: none;
+    background-image: url(recursos/Persona2.PNG);
+}
+
+.card:hover .imagen_personaje_3{
+    transform: translatey(-40px);
+    transition: 300ms;
+    filter: none;
+    background-image: url(recursos/Persona3.PNG);
+}
+
+.card:hover .personaje{
+    background-image: radial-gradient(#40DC30,#003300);
+}
+
+.card:hover .personaje_2{
+    background-image: radial-gradient(#40DC30,#003300);
+}
+
+.card:hover .personaje_3{
+    background-image: radial-gradient(#40DC30,#003300);
+}
+
+/* texto y bottun */
+
+h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p{
+    margin: auto;
+    width: 90%;
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .card {
+        height: 250px;
+        width: 200px;
+    }
+
+    .personaje, .personaje_2, .personaje_3 {
+        height: 220px;
+        width: 200px;
+    }
+
+    .imagen_personaje {
+        height: 200px; /* Reducir la altura de la imagen */
+        width: 120px; /* Reducir el ancho de la imagen */
+        margin-bottom: 100px; /* Reducir el margen inferior */
+    }
+
+    .imagen_personaje_2 {
+        height: 200px; /* Reducir la altura de la imagen */
+        width: 150px; /* Reducir el ancho de la imagen */
+        margin-bottom: 100px; /* Reducir el margen inferior */
+    }
+
+    .imagen_personaje_3 {
+        height: 200px; /* Reducir la altura de la imagen */
+        width: 120px; /* Reducir el ancho de la imagen */
+        margin-bottom: 100px; /* Reducir el margen inferior */
+    }
+
+    .detalle, .detalle_2, .detalle_3 {
+        height: 120px;
+        width: 200px;
+        margin-top: 100px;
+    }
+
+     /* Desactivar el efecto hover */
+     .card:hover .imagen_personaje,
+     .card:hover .imagen_personaje_2,
+     .card:hover .imagen_personaje_3 {
+         transform: translateY(0);
+         filter: none;
+     }
+ 
+     .card:hover .personaje,
+     .card:hover .personaje_2,
+     .card:hover .personaje_3 {
+         background-image: none;
+     }
+
+     .container{
+        padding: 50px;
+     }
+}
